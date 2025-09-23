@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤖 Project Genesis v1.0 ✨
+# 🤖 pyeBOT v1.2 ✨
 
 <p>Sebuah chatbot sederhana berbasis aturan (rule-based) yang dibuat dengan Python. Langkah pertama dalam perjalanan membangun sebuah AI.</p>
 
@@ -43,16 +43,16 @@ Proyek ini sangat ringan dan mudah untuk dijalankan.
 
 1.  **Clone repositori ini:**
     ```bash
-    git clone https://github.com/aadnanmt/chatbott-python-language.git
+    git clone https://github.com/aadnanmt/pyeBOT-DEMO/.git
     ```
 2.  **Masuk ke direktori proyek:**
     ```bash
-    cd chatbott-python-language/Genesis-Project/
+    cd pyeBOT-DEMO/pyeBOT/
     ```
 3.  **Jalankan script-nya!**
-    *Tidak perlu instalasi apa-apa.* Cukup jalankan file `genesis_core.py` dengan Python.
+    *Tidak perlu instalasi apa-apa.* Cukup jalankan file `main.py` dengan Python.
     ```bash
-    python genesis_core.py
+    python main.py
     ```
 
 <details>
