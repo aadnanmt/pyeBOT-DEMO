@@ -1,8 +1,8 @@
 # Chatbot Sederhana dengan Python (sebelumnya project bernama Genesis Core) 
-# yang diubah menjadi pyeBOT dan berkemungkinan besar akan dirubah kemabli suata saat nanti
+# yang diubah menjadi Pibot dan berkemungkinan besar akan dirubah kemabli suata saat nanti
 # Dengan menggunakan regex dan random
 # Untuk mengenali input dari user dan memberikan respon yang sesuai
-# pyeBOT.py (sebelumnya chatbot.py)
+# Pibot.py (sebelumnya chatbot.py)
 
 import re
 import random
@@ -13,7 +13,7 @@ from datetime import datetime # <-- IMPORT BARU untuk fitur waktu
 # List lama yang sudah ditambah variasinya
 list_sapaan = [
     "Hai juga", "Haii juga", "Hallo juga, ada yang bisa aku bantu?", "Apa kabar?",
-    "Wassup! Ada yang bisa kubantu?", "Yo, ada apa nih?", "Haloo, koneksi ke server Pye.Bot berhasil!"
+    "Wassup! Ada yang bisa kubantu?", "Yo, ada apa nih?", "Haloo, koneksi ke server Pibot berhasil!"
 ]
 list_perpisahan = [
     "papaiiii", "Sampai jumpa lagi, ya!", "byee", "Okee, dadahh",
@@ -28,8 +28,8 @@ list_terima_kasih = [
     "Santuyy", "No worries!", "Siap, dengan senang hati!"
 ]
 list_identitas = [
-    "Aku Pye.Bot, asisten virtual yang dibuat olehmu.", "Kenalin, aku Pye.Bot!",
-    "Aku Pye.Bot, sebuah AI sederhana dengan mimpi besar, dibuat oleh seorang calon AI Engineer.",
+    "Aku Pibot, asisten virtual yang dibuat olehmu.", "Kenalin, aku Pibot!",
+    "Aku Pibot, sebuah AI sederhana dengan mimpi besar, dibuat oleh seorang calon AI Engineer.",
     "Aku ini kumpulan kode yang jadi temen ngobrolmu."
 ]
 list_jokes = [
@@ -79,7 +79,7 @@ list_bingung = [
 ]
 
 
-print("Pye.Bot:\tHai! Aku Pye.Bot. Ngobrol yuk!")
+print("Pibot:\tHai! Aku Pibot. Ngobrol yuk!")
 
 # --- Logic Utama Chatbot (Struktur Asli + Tambahan) ---
 while True:
@@ -87,45 +87,45 @@ while True:
 
     # 1. Cek Sapaan
     if re.findall(r'halo|hai|hallo|hello|woi|p', user_input):
-        print("Pye.Bot:\t", random.choice(list_sapaan))
+        print("Pibot:\t", random.choice(list_sapaan))
 
     # 2. Cek pertanyaan "siapa kamu?"
     elif re.findall(r'kamu siapa|siapa kamu|ini siapa', user_input):
-        print("Pye.Bot:\t", random.choice(list_identitas))
+        print("Pibot:\t", random.choice(list_identitas))
 
     # 3. Cek pertanyaan "apa kabar?"
     elif re.findall(r'apa kabar|gimana kabar|piye kabare', user_input):
-        print("Pye.Bot:\t", random.choice(list_kabar_baik))
+        print("Pibot:\t", random.choice(list_kabar_baik))
     
     # 4. Cek permintaan jokes/candaan
     elif re.findall(r'jokes|canda|ngelawak|lucu', user_input):
-        print("Pye.Bot:\t", random.choice(list_jokes))
+        print("Pibot:\t", random.choice(list_jokes))
 
     # 5. Cek ucapan terima kasih
     elif re.findall(r'makasih|terima kasih|thanks|nuwun', user_input):
-        print("Pye.Bot:\t", random.choice(list_terima_kasih))
+        print("Pibot:\t", random.choice(list_terima_kasih))
 
     # <-- BLOK BARU: Kemampuan Bot -->
     elif re.findall(r'kamu bisa apa|bisa apa aja|help|bantuan', user_input):
-        print("Pye.Bot:\t", random.choice(list_kemampuan))
+        print("Pibot:\t", random.choice(list_kemampuan))
 
     # <-- BLOK BARU: Waktu & Tanggal -->
     elif re.findall(r'jam berapa|sekarang jam|waktu|tanggal', user_input):
-        print("Pye.Bot:\t", random.choice(get_time_responses())) # Memanggil fungsi
+        print("Pibot:\t", random.choice(get_time_responses())) # Memanggil fungsi
 
     # <-- BLOK BARU: Motivasi -->
     elif re.findall(r'semangat|capek nih|pusing|lelah', user_input):
-        print("Pye.Bot:\t", random.choice(list_motivasi))
+        print("Pibot:\t", random.choice(list_motivasi))
         
     # <-- BLOK BARU: Pujian Kreator -->
     elif re.findall(r'kamu keren|bot pintar|hebat kamu', user_input):
-        print("Pye.Bot:\t", random.choice(list_pujian_kreator))
+        print("Pibot:\t", random.choice(list_pujian_kreator))
 
     # Blok Perpisahan (tetap di dekat akhir)
     elif re.findall(r'bye|dadah|papai|udah dulu|keluar', user_input):
-        print("Pye.Bot:\t", random.choice(list_perpisahan))
+        print("Pibot:\t", random.choice(list_perpisahan))
         break # Perintah untuk menghentikan loop
 
     # Blok terakhir jika tidak ada yang cocok sama sekali
     else:
-        print("Pye.Bot:\t", random.choice(list_bingung))
+        print("Pibot:\t", random.choice(list_bingung))
